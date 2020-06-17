@@ -63,6 +63,25 @@ function main(){
   // const sortedArr = arr.sort((a,b) => a - b);
   // console.log('2.a: '+ linearCounter(arr, 13));
   // console.log('2.b: '+ binarySearch(sortedArr, 13));
+  //3. Find a book
   console.log(findBook(002, 'A book1'))
+  //4. Searching in a BST
+  //            35  
+  //           /   \ 
+  //         5      89  
+  //       /  \     / \
+  //     15    27   79  91
+  //    / \            /
+  //  14   19         90
+
+  //4.a= 14,19,15,27,25,79,90,91,89,35
+
+  //         8
+  //       /   \
+  //     7       10
+  //    / \     /  \
+  //   5    6   9   11   
+
+  //4.b= 5,6,7,10,9,11,8
 }
 const mainRun = main();
