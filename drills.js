@@ -36,7 +36,7 @@ function binarySearch(array, value, start=0, end=array.length-1,count=1) {
 //look up book by dewey, find dewey, arr[dewey] = book
 const arr = [{dewey: 001, title: 'A book'}, {dewey: 002, title: 'A book1'}, {dewey: 003, title: 'A book2'}]
 
-function findBook(dewey, start = 0, end = arr.length) {
+function findBook(dewey, title, start = 0, end = arr.length) {
 
   let index = Math.floor((start + end) / 2);
 
