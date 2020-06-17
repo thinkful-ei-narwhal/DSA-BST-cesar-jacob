@@ -95,5 +95,15 @@ function main(){
   console.log(BST.postOrder());
 
   //6. Find the next commanding officer
+  const BST2 = new BinarySearchTree();
+  BST2.insert(8, 'Captain Picard')
+  BST2.insert(6, 'Commander Riker')
+  BST2.insert(10, 'Commander Data')
+  BST2.insert(5, 'Lt. Cmdr.Worf')
+  BST2.insert(7, 'Lt. Cmdr. LaForge')
+  BST2.insert(12, 'Lt. Cmdr.Crusher')
+  BST2.insert(4, 'Lieutenant security-officer')
+  BST2.insert(11, 'Selar')
+  console.log(BST2);
 }
 const mainRun = main();
