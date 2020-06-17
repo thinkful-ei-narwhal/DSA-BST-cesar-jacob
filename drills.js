@@ -54,26 +54,6 @@ function findBook(dewey, title, start = 0, end = arr.length) {
   }
 }
 
-function preOrder(tree) {
-  if (tree === null) {
-    return [];
-  }
-  const stack = [];
-  const result = [];
-
-   stack.push(tree);
-
-   while(stack.length > 0) {
-     let current = stack.pop();
-     result.push(current.key);
-
-     if (current.right) stack.push(current.right);
-     if (current.left) stack.push(current.left);
-   }
-
-   return result;
-}
-
 function main(){
   //1. How many searches?
   //A. 11,6,8
@@ -109,9 +89,11 @@ function main(){
   const BST = new BinarySearchTree();
   const dataset = [25, 15, 50, 10, 24, 35, 70, 4, 12, 18, 31, 44, 66, 90, 22];
   dataset.forEach(data => BST.insert(data, data));
-  
+
+  console.log(BST.preOrder());
   console.log(BST.inOrder());
-  // console.log(BST.preOrder());
-  // console.log(BST.postOrder());
+  console.log(BST.postOrder());
+
+  //6. Find the next commanding officer
 }
 const mainRun = main();

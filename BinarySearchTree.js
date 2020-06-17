@@ -121,6 +121,30 @@ class BinarySearchTree {
     return values;
   }
 
+  preOrder(values=[]) {
+    values.push(this.value);
+    if (this.left) {
+      values = this.left.preOrder(values);
+    }
+  
+    if (this.right) {
+      values = this.right.preOrder(values);
+    }
+    return values;
+  }
+
+  postOrder(values=[]) {
+    if (this.left) {
+      values = this.left.postOrder(values);
+    }
+  
+    if (this.right) {
+      values = this.right.postOrder(values);
+    }
+    values.push(this.value);
+    return values;
+  }
+
 }
 
 module.exports = BinarySearchTree;
