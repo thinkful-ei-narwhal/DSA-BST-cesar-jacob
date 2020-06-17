@@ -108,6 +108,19 @@ class BinarySearchTree {
     }
     return this.left._findMin();
   }
+
+  inOrder(values=[]) {
+    if (this.left) {
+      values = this.left.inOrder(values);
+    }
+    values.push(this.value);
+  
+    if (this.right) {
+      values = this.right.inOrder(values);
+    }
+    return values;
+  }
+
 }
 
 module.exports = BinarySearchTree;
