@@ -54,6 +54,17 @@ function findBook(dewey, title, start = 0, end = arr.length) {
   }
 }
 
+function findLeader(tree, arr = [], position) {
+if(tree.left !== null) {
+  position = findLeader(tree.left, arr, pos)
+}
+arr[position] = tree.value
+if(tree.right !== null) {
+  position = findLeader(tree.right, arr, position)
+}
+return arr;
+}
+
 function main(){
   //1. How many searches?
   //A. 11,6,8
@@ -104,6 +115,6 @@ function main(){
   BST2.insert(12, 'Lt. Cmdr.Crusher')
   BST2.insert(4, 'Lieutenant security-officer')
   BST2.insert(11, 'Selar')
-  console.log(BST2);
+  console.log(findLeader(BST2));
 }
 const mainRun = main();
